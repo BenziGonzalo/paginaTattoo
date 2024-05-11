@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    color: #fff;
+}
+
+:root{
+
+    --color-principal: #242121;
+    --color-secundario: #2b2727;
+    --color-detalles-oscuros: #0f0e0e;
+    --color-botones-hover: #fcff57;
+    --color-botones: #929024;
+}
+
+body{
+    background-color: var(--color-principal);
+}
+
+header{
+    width: 100%;
+    background-color: var(--color-secundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo__container{
+    
+        height: 15svh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .logo__link{
+    
+            padding: 10px 15px 5px 15px;
+            border: 4px solid var(--color-botones);
+            transition: transform 0.5s ease, border 0.5s ease;
+    
+            .logo__nombre{
+        
+                height: 100%;
+                width: 100%;
+                font-weight: 900;
+                font-size: 25px;
+                text-decoration-line: underline overline;
+                color: var(--color-botones);
+                transition: color 0.5s ease;
+            }
+        }
+
+        .logo__link:hover{
+
+            transform: scale(1.1);
+            border: 4px solid var(--color-botones-hover);
+            transition: transform 0.5s ease, border 0.5s ease;
+
+            .logo__nombre{
+
+                color: var(--color-botones-hover);
+                transition: color 0.5s ease;
+            }
+        }
+    }
+    
+    .navbar{
+    
+        width: 100%;
+        height: 10svh;
+        display: flex;
+        justify-content: center;
+    
+        .ul__nav{
+    
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+    
+            .link__boton__nav{
+    
+                background-color: var(--color-principal);
+                border-bottom: 3px solid #fff;
+                width: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+                font-size: 1.3rem;
+                /* padding: 20px 0; */
+                transition: background-color 0.5s ease, border-bottom 0.5s ease;
+    
+                .boton__nav{
+    
+                    color: #fff;
+                    transition: color 0.5s ease;
+                }
+            }
+            
+            .boton__resaltado{
+    
+                background-color: var(--color-botones);
+                transition: background-color 0.5s ease, border-bottom 0.5s ease;  
+            
+                .boton__nav{
+    
+                    transition: color 0.5s ease;
+                }
+            }
+            
+            .link__boton__nav:hover{
+    
+                background-color: var(--color-botones-hover);
+                border-bottom: 3px solid var(--color-detalles-oscuros);
+                transition: background-color 0.5s ease, border-bottom 0.5s ease;
+    
+                .boton__nav{
+    
+                    color: var(--color-detalles-oscuros);
+                    transition: color 0.5s ease;
+                }
+            }
+        }
+    }
+}
+
+.intro{
+
+    background-color: var(--color-secundario);
+    width: 100%;
+    height: 75svh;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.services{
+
+    background-color: var(--color-principal);
+    padding: 0.5rem;
+}
+
+.tatuador{
+
+    background-color: var(--color-secundario);
+    padding: 0.5rem;
+}
+
+.pedidos{
+
+    background-color: var(--color-principal);
+    padding: 0.5rem;
+}
+
+footer{
+
+    background-color: var(--color-secundario);
+    width: 100%;
+    padding: 0.5rem;
+    text-align: center;
+    /* display: inline-block; */
+
+    h3{
+        margin-bottom: 0.5rem;
+    }
+
+    h4{
+    
+        display: inline-block;
+        margin: 0.3rem 1rem;
+
+        a:hover{
+    
+            color: var(--color-botones-hover)
+        }
+    }
+
+    div{
+
+        padding: 1rem;
+    }
+}
