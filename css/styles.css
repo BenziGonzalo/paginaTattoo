@@ -9,11 +9,11 @@
 
 :root{
 
-    --color-principal: #242121;
-    --color-secundario: #2b2727;
+    --color-principal: #75536e;
+    --color-secundario: #a877a0;
     --color-detalles-oscuros: #0f0e0e;
-    --color-botones-hover: #fcff57;
-    --color-botones: #929024;
+    --color-botones-hover: #7dfff9;
+    --color-botones: #78377e;
 }
 
 body{
@@ -22,7 +22,7 @@ body{
 
 header{
     width: 100%;
-    background-color: var(--color-secundario);
+    background-color: var(--color-principal);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,7 +38,7 @@ header{
         .logo__link{
     
             padding: 10px 15px 5px 15px;
-            border: 4px solid var(--color-botones);
+            border: 4px solid #fff;
             transition: transform 0.5s ease, border 0.5s ease;
     
             .logo__nombre{
@@ -48,7 +48,6 @@ header{
                 font-weight: 900;
                 font-size: 25px;
                 text-decoration-line: underline overline;
-                color: var(--color-botones);
                 transition: color 0.5s ease;
             }
         }
@@ -82,7 +81,7 @@ header{
     
             .link__boton__nav{
     
-                background-color: var(--color-principal);
+                background-color: var(--color-secundario);
                 border-bottom: 3px solid #fff;
                 width: 50%;
                 display: flex;
@@ -90,7 +89,6 @@ header{
                 align-items: center;
                 font-weight: 600;
                 font-size: 1.3rem;
-                /* padding: 20px 0; */
                 transition: background-color 0.5s ease, border-bottom 0.5s ease;
     
                 .boton__nav{
@@ -113,7 +111,7 @@ header{
             
             .link__boton__nav:hover{
     
-                background-color: var(--color-botones-hover);
+                background-color: var(--color-principal);
                 border-bottom: 3px solid var(--color-detalles-oscuros);
                 transition: background-color 0.5s ease, border-bottom 0.5s ease;
     
@@ -129,7 +127,7 @@ header{
 
 .intro{
 
-    background-color: var(--color-secundario);
+    background-color: var(--color-principal);
     width: 100%;
     height: 75svh;
     padding: 0.5rem;
@@ -141,25 +139,25 @@ header{
 
 .services{
 
-    background-color: var(--color-principal);
+    background-color: var(--color-secundario);
     padding: 0.5rem;
 }
 
 .tatuador{
 
-    background-color: var(--color-secundario);
+    background-color: var(--color-principal);
     padding: 0.5rem;
 }
 
 .pedidos{
 
-    background-color: var(--color-principal);
+    background-color: var(--color-secundario);
     padding: 0.5rem;
 }
 
 footer{
 
-    background-color: var(--color-secundario);
+    background-color: var(--color-principal);
     width: 100%;
     padding: 0.5rem;
     text-align: center;
