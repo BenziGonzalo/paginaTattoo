@@ -12,12 +12,17 @@
     --color-principal: #75536e;
     --color-secundario: #a877a0;
     --color-detalles-oscuros: #0f0e0e;
-    --color-botones-hover: #7dfff9;
+    --color-botones-hover: #ff81ee;
     --color-botones: #78377e;
 }
 
 body{
     background-color: var(--color-principal);
+}
+
+h2{
+    padding: 1rem;
+    text-align: center;
 }
 
 header{
@@ -111,7 +116,7 @@ header{
             
             .link__boton__nav:hover{
     
-                background-color: var(--color-principal);
+                background-color: var(--color-botones-hover);
                 border-bottom: 3px solid var(--color-detalles-oscuros);
                 transition: background-color 0.5s ease, border-bottom 0.5s ease;
     
@@ -127,14 +132,29 @@ header{
 
 .intro{
 
-    background-color: var(--color-principal);
-    width: 100%;
+    background-image: url(../img/tattoo4.jpg);
     height: 75svh;
     padding: 0.5rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
+    text-align: center;
+
+    a{
+        padding: 10px 10px;
+        font-size: 1.3rem;
+        font-weight: 600;
+        background-color: var(--color-botones);
+        transition: color 0.5s ease, background-color 0.5s ease;
+    }
+
+    a:hover{
+
+        background-color: var(--color-botones-hover);
+        color: #000;
+        transition: color 0.5s ease, background-color 0.5s ease;
+    }
 }
 
 .services{
@@ -146,7 +166,44 @@ header{
 .tatuador{
 
     background-color: var(--color-principal);
-    padding: 0.5rem;
+
+    .container__tatuador{
+
+        width: 100%;
+        border: #fff solid 3px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+
+        img{
+            width: 15rem;
+            height: 15rem;
+            padding: 1rem;
+            border-radius: 30px;
+            align-self: center;
+        }
+
+        .datos__tatuador{
+
+            width: 100%;
+            /* padding: 0.5rem; */
+
+            h3{
+                text-align: center;
+                padding: 0.5rem;
+            }
+
+            .mas__datos{
+
+                width: 100%;
+                padding: 0.5rem;
+                text-align: left;
+                display:flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
 }
 
 .pedidos{
@@ -161,25 +218,39 @@ footer{
     width: 100%;
     padding: 0.5rem;
     text-align: center;
-    /* display: inline-block; */
 
     h3{
         margin-bottom: 0.5rem;
     }
 
+    .container__contactos{
+
+        padding: 1rem;
+        width: 100%;
+
+        .contactos{
+
+            margin: 0.3rem 0;
+            width: 100%;
+
+            h5{
+                display:inline-block;
+            }
+        }
+    }
+
+    .social{
+
+        width: 100%;
+    }
+
     h4{
     
         display: inline-block;
-        margin: 0.3rem 1rem;
 
         a:hover{
     
             color: var(--color-botones-hover)
         }
-    }
-
-    div{
-
-        padding: 1rem;
     }
 }

@@ -18,8 +18,8 @@
 
         <nav class="navbar">
             <ul class="ul__nav">
-                <a href="" class="link__boton__nav"><li class="boton__nav">Registrarse</li></a>
-                <a href="" class="link__boton__nav boton__resaltado"><li class="boton__nav">Iniciar Sesión</li></a>
+                <a href="#servicios" class="link__boton__nav"><li class="boton__nav">Servicios</li></a>
+                <a href="#tatuadores" class="link__boton__nav boton__resaltado"><li class="boton__nav">Tatuadores</li></a>
             </ul>
         </nav>
 
@@ -32,10 +32,11 @@
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto eligendi rerum laudantium doloremque, delectus quis pariatur modi quaerat nulla ullam odit placeat iusto animi explicabo! Eaque dolores ullam perferendis ab?
         </p>
+        <a href="#pedidos">Pedir Turno</a>
 
     </section>
 
-    <section class="services">
+    <section id="servicios" class="services">
 
         <h2>Servicios</h2>
         <h3>Tipo de servicio</h3>
@@ -45,38 +46,73 @@
 
     </section>
 
-    <section class="tatuador">
+    <section id="tatuadores" class="tatuador">
 
-        <h2>Datos del Artista</h2>
-        <div>
-            <h3>Nombre: </h3>
-            <h4>Agustina</h4>
+        <h2>Tatuador</h2>
+        <div class="container__tatuador">
+            <img src="img/tattoo1.jpg" alt="foto tatuador">
+            <div class="datos__tatuador">
+                <h3>Ferreira Agustina</h3>
+                <div class="mas__datos">
+                    <h4>telefono: 1234567890</h4>
+                    <h4>especialidades:</h4>
+                    <h4>anime</h4>
+                    <h4>realista</h4>
+                    <h4>jhjcbqsdaoc</h4>
+                    <h4>jhjcbqsdaoc</h4>
+                    <h4>jhjcbqsdaoc</h4>
+                </div>
+            </div>
+            
         </div>
 
     </section>
 
-    <section class="pedidos">
+    <section id="pedidos" class="pedidos">
 
         <h2>Pedir turno</h2>
 
-        <div>
-            <input type="text" alt="Nombre">
-            <input type="text" alt="Apellido">
-            <input type="tel" alt="Telefono">
-            <input type="email" alt="Correo Electrónico">
-        </div>
+        <form action="">
+            <div>
+                <span>Nombre(s)</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>Apellido(s)</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>Correo Electrónico</span>
+                <input type="email">
+            </div>
+            <div>
+                <span>Teléfono</span>
+                <input type="tel">
+            </div>
+            <button type="submit"></button>
+        </form>
 
     </section>
     
     <footer>
 
-        <div class="contactos">
+        <div class="container__contactos">
 
             <h3>Contactos:</h3>
 
-            <h4>Teléfono: 1234567891</h4>
-            <h4>Email: patata@gmail.com</h4>
-            <h4>Direccion: Calle Falsa 123</h4>
+            <div class="contactos">
+                <h4>Teléfono:</h4>
+                <h5>1234567891</h5>
+            </div>
+            <div class="contactos">
+                <h4>Email:</h4>
+                <h5>patata@gmail.com</h5>
+            </div>
+            <div class="contactos">
+                <h4>Direccion:</h4>
+                <h5>Calle Falsa 123</h5>
+            </div>
+
         </div>
         
         <div class="social">
