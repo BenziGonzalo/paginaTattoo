@@ -9,11 +9,12 @@
 
 :root{
 
-    --color-principal: #75536e;
-    --color-secundario: #a877a0;
-    --color-detalles-oscuros: #0f0e0e;
-    --color-botones-hover: #ff81ee;
-    --color-botones: #78377e;
+    --color-principal: #003;
+    --color-secundario: #004;
+    --color-detalles: #1af;
+    --color-botones-hover: #003;
+    --color-botones: #04a;
+    --letras-hover: #1af;
 }
 
 body{
@@ -60,12 +61,12 @@ header{
         .logo__link:hover{
 
             transform: scale(1.1);
-            border: 4px solid var(--color-botones-hover);
+            border: 4px solid var(--color-botones);
             transition: transform 0.5s ease, border 0.5s ease;
 
             .logo__nombre{
 
-                color: var(--color-botones-hover);
+                color: var(--color-botones);
                 transition: color 0.5s ease;
             }
         }
@@ -117,12 +118,12 @@ header{
             .link__boton__nav:hover{
     
                 background-color: var(--color-botones-hover);
-                border-bottom: 3px solid var(--color-detalles-oscuros);
+                border-bottom: 3px solid var(--color-detalles);
                 transition: background-color 0.5s ease, border-bottom 0.5s ease;
     
                 .boton__nav{
     
-                    color: var(--color-detalles-oscuros);
+                    color: var(--letras-hover);
                     transition: color 0.5s ease;
                 }
             }
@@ -132,7 +133,10 @@ header{
 
 .intro{
 
-    background-image: url(../img/tattoo4.jpg);
+    background-image: url(../img/tattoo1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     height: 75svh;
     padding: 0.5rem;
     display: flex;
@@ -152,7 +156,7 @@ header{
     a:hover{
 
         background-color: var(--color-botones-hover);
-        color: #000;
+        color: var(--letras-hover);
         transition: color 0.5s ease, background-color 0.5s ease;
     }
 }
