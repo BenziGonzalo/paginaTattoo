@@ -9,37 +9,48 @@
 
 :root{
 
-    --color-principal: #003;
-    --color-secundario: #004;
-    --color-detalles: #1af;
-    --color-botones-hover: #003;
-    --color-botones: #04a;
-    --letras-hover: #1af;
+    --color-principal: #003b;
+    --color-secundario: #004b;
+    --color-detalles: #1afb;
+    --color-botones-hover: #002b;
+    --color-botones: #04ab;
+    --letras-hover: #1af9;
 }
 
 body{
     background-color: var(--color-principal);
 }
 
+h1{
+    font-size: 3em;
+}
+
 h2{
     margin-bottom: 1rem;
     text-align: center;
+    font-size: 2em;
 }
 
-header{
-    width: 100%;
+p{
+    font-size: 1.2em;
+}
+
+.header{
+    flex-basis: 100%;
     background-color: var(--color-principal);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 
     .logo__container{
     
         height: 15svh;
-        width: 100%;
+        width: 300px;
         display: flex;
         align-items: center;
         justify-content: center;
+        margin: 0 30px;
     
         .logo__link{
     
@@ -74,28 +85,27 @@ header{
     
     .navbar{
     
-        width: 100%;
+        width: 300px;
         height: 10svh;
         display: flex;
         justify-content: center;
+        margin: 0 30px;
     
         .ul__nav{
     
-            width: 100%;
             display: flex;
-            justify-content: space-around;
     
             .link__boton__nav{
     
+                margin: 0 5px;
+                padding: 0 30px;
                 background-color: var(--color-secundario);
-                border-bottom: 3px solid #fff;
-                width: 50%;
+                border-radius: 10px;
                 display: flex;
-                justify-content: center;
                 align-items: center;
                 font-weight: 600;
                 font-size: 1.3rem;
-                transition: background-color 0.5s ease, border-bottom 0.5s ease;
+                transition: background-color 0.5s ease;
     
                 .boton__nav{
     
@@ -107,7 +117,7 @@ header{
             .boton__resaltado{
     
                 background-color: var(--color-botones);
-                transition: background-color 0.5s ease, border-bottom 0.5s ease;  
+                transition: background-color 0.5s ease;  
             
                 .boton__nav{
     
@@ -118,8 +128,7 @@ header{
             .link__boton__nav:hover{
     
                 background-color: var(--color-botones-hover);
-                border-bottom: 3px solid var(--color-detalles);
-                transition: background-color 0.5s ease, border-bottom 0.5s ease;
+                transition: background-color 0.5s ease;
     
                 .boton__nav{
     
@@ -136,14 +145,19 @@ header{
     background-image: url(../img/tattoo1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center right;
     height: 75svh;
-    padding: 0.5rem;
+    padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    position: relative;
+
+    a, h1, h2, p{
+        z-index: 100;
+    }
 
     a{
         padding: 10px 10px;
@@ -159,6 +173,15 @@ header{
         background-color: var(--color-botones-hover);
         color: var(--letras-hover);
         transition: color 0.5s ease, background-color 0.5s ease;
+    }
+
+    .intro__color-box{
+
+        height: 100%;
+        width:100%;
+        background-color: var(--color-principal);
+        position: absolute;
+        top: 0;
     }
 }
 
@@ -240,15 +263,15 @@ footer{
 
     h3{
         margin-bottom: 20px;
-        font-size: 25px;
+        font-size: 1.5em;
     }
 
     h4{
-        font-size: 20px;
+        font-size: 1.2em;
     }
 
     h5{
-        font-size: 15px;
+        font-size: 1.1em;
     }
 
     .container__contactos{
