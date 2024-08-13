@@ -9,8 +9,8 @@
 
 :root{
 
-    --color-principal: rgba(4, 4, 29, 0.733);
-    --color-secundario: rgb(0, 0, 32);
+    --color-principal: rgba(1, 1, 39, 0.8);
+    --color-secundario: rgba(0, 0, 32, 0.8);
     --color-detalles: #1afd;
     --color-botones-hover: rgb(51, 183, 245);
     --color-botones: rgb(1, 43, 71);
@@ -18,7 +18,13 @@
 }
 
 body{
-    background-color: var(--color-principal);
+    background-color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+a{
+    font-style: italic;
+    transition: color 0.2s ease, background-color 0.2s ease;
 }
 
 h1{
@@ -37,6 +43,18 @@ p{
 
 /*--------------------------------------- HEADER ---------------------------------------*/
 
+
+@keyframes spawnMenu{
+
+    from{
+        left: -100vh;
+    }
+    to{
+        left: 0vh;
+    }
+}
+
+
 .header{
 
     background-color: var(--color-secundario);
@@ -51,13 +69,31 @@ p{
 .header__open-nav-button{
 
     color: var(--color-detalles);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    margin: 0 15px;
     cursor: pointer;
+    margin: 0 15px;
 }
 
-.header__open-nav-button:hover{
+.header__close-nav-button{
+
+    display: none;
+    color: var(--color-detalles);
+    font-size: 2.3rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 0 15px;
+}
+
+.header__open-nav-button,
+.header__close-nav-button{
+
+    transition: color 0.2s ease;
+    z-index: 100;
+}
+
+.header__open-nav-button:hover,
+.header__close-nav-button:hover{
 
     color: var(--color-botones-hover);
 }
@@ -76,7 +112,9 @@ p{
     top: 10vh;
     background-color: var(--color-secundario);
     z-index: 2;
-    
+    backdrop-filter: blur(5px);
+    animation-name: spawnMenu;
+    animation-duration: 1s;
 }
 
 .ul__nav{
@@ -110,19 +148,41 @@ p{
     display: flex;
 }
 
+.header__checkbox:checked ~ .header__open-nav-button{
+
+    display: none;
+}
+
+.header__checkbox:checked ~ .header__close-nav-button{
+
+    display: block;
+}
+
 .logo__container{
 
     margin: 15px 0;
+    z-index: 101;
 }
 
 .logo__nombre{
 
     max-width: 100%;
     width: 64px;
-    margin: 10px 20px ;
-    background-color: var(--color-detalles);
+    margin: 10px 20px;
+    text-decoration: overline underline;
+    font-weight: 800;
+    font-size: 25px;
+    color: var(--color-botones-hover);
+    border: solid 2px var(--color-botones-hover);
     border-radius: 10px;
     padding: 8px 10px;
+    transition: color 0.2s ease, border 0.2s ease;
+}
+
+.logo__nombre:hover{
+
+    color: #fff;
+    border: solid 2px #fff;
 }
 
 /* --------------------------------------- INTRO --------------------------------------- */
@@ -150,6 +210,7 @@ p{
     background-color: var(--color-principal);
     height: 100%;
     width: 100%;
+    backdrop-filter: blur(5px);
 }
 
 .boton__link{
@@ -170,25 +231,43 @@ p{
 .intro h1, h2, p, a{
 
     z-index: 1;
+    text-align: center;
 }
 
 /* SERVICIOS */
 
 .services{
-    display:none;
+
+    /* display:none; */
+    background-color: var(--color-principal);
 }
+
+/*------------------------------ DATOS DEL TATUADOR ------------------------------*/
 
 .tatuador{
 
-    display: none;
+    /* display: none; */
+    background-color: var(--color-secundario);
 }
+
+.foto-tatuador{
+
+    width: 150px;
+    height: 150px;
+}
+
+/*------------------------------------ PEDIDOS ------------------------------------*/
 
 .pedidos{
 
-    display: none;
+    /* display: none; */
+    background-color: var(--color-principal);
 }
+
+/*------------------------------------- FOOTER -------------------------------------*/
 
 .footer{
 
-    display: none;
+    /* display: none; */
+    background-color: var(--color-secundario);
 }
