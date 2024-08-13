@@ -9,11 +9,11 @@
 
 :root{
 
-    --color-principal: #003b;
-    --color-secundario: #004b;
-    --color-detalles: #1afb;
-    --color-botones-hover: #002b;
-    --color-botones: #04ab;
+    --color-principal: rgba(4, 4, 29, 0.733);
+    --color-secundario: rgb(0, 0, 32);
+    --color-detalles: #1afd;
+    --color-botones-hover: rgb(51, 183, 245);
+    --color-botones: rgb(1, 43, 71);
     --letras-hover: #1af9;
 }
 
@@ -35,275 +35,160 @@ p{
     font-size: 1.2em;
 }
 
+/*--------------------------------------- HEADER ---------------------------------------*/
+
 .header{
-    flex-basis: 100%;
-    background-color: var(--color-principal);
+
+    background-color: var(--color-secundario);
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-    .logo__container{
-    
-        height: 15svh;
-        width: 300px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 30px;
-    
-        .logo__link{
-    
-            padding: 10px 15px 5px 15px;
-            border: 4px solid #fff;
-            transition: transform 0.5s ease, border 0.5s ease;
-    
-            .logo__nombre{
-        
-                height: 100%;
-                width: 100%;
-                font-weight: 900;
-                font-size: 25px;
-                text-decoration-line: underline overline;
-                transition: color 0.5s ease;
-            }
-        }
-
-        .logo__link:hover{
-
-            transform: scale(1.1);
-            border: 4px solid var(--color-botones);
-            transition: transform 0.5s ease, border 0.5s ease;
-
-            .logo__nombre{
-
-                color: var(--color-botones);
-                transition: color 0.5s ease;
-            }
-        }
-    }
-    
-    .navbar{
-    
-        width: 300px;
-        height: 10svh;
-        display: flex;
-        justify-content: center;
-        margin: 0 30px;
-    
-        .ul__nav{
-    
-            display: flex;
-    
-            .link__boton__nav{
-    
-                margin: 0 5px;
-                padding: 0 30px;
-                background-color: var(--color-secundario);
-                border-radius: 10px;
-                display: flex;
-                align-items: center;
-                font-weight: 600;
-                font-size: 1.3rem;
-                transition: background-color 0.5s ease;
-    
-                .boton__nav{
-    
-                    color: #fff;
-                    transition: color 0.5s ease;
-                }
-            }
-            
-            .boton__resaltado{
-    
-                background-color: var(--color-botones);
-                transition: background-color 0.5s ease;  
-            
-                .boton__nav{
-    
-                    transition: color 0.5s ease;
-                }
-            }
-            
-            .link__boton__nav:hover{
-    
-                background-color: var(--color-botones-hover);
-                transition: background-color 0.5s ease;
-    
-                .boton__nav{
-    
-                    color: var(--letras-hover);
-                    transition: color 0.5s ease;
-                }
-            }
-        }
-    }
+    position: relative;
+    height: 10vh;
 }
+
+
+.header__open-nav-button{
+
+    color: var(--color-detalles);
+    font-size: 3rem;
+    font-weight: 600;
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.header__open-nav-button:hover{
+
+    color: var(--color-botones-hover);
+}
+
+.header__checkbox{
+
+    display: none;
+}
+
+.navbar{
+
+    display: none;
+    position: absolute;
+    height: 90vh;
+    width: 100vw;
+    top: 10vh;
+    background-color: var(--color-secundario);
+    z-index: 2;
+    
+}
+
+.ul__nav{
+
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    margin: auto;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.boton__nav-link{
+
+    background-color: var(--color-botones);
+    color: var(--color-botones-hover);
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+.boton__nav-link:hover{
+
+    background-color: var(--color-botones-hover);
+    color: var(--color-botones);
+}
+
+.header__checkbox:checked ~ .navbar{
+
+    display: flex;
+}
+
+.logo__container{
+
+    margin: 15px 0;
+}
+
+.logo__nombre{
+
+    max-width: 100%;
+    width: 64px;
+    margin: 10px 20px ;
+    background-color: var(--color-detalles);
+    border-radius: 10px;
+    padding: 8px 10px;
+}
+
+/* --------------------------------------- INTRO --------------------------------------- */
 
 .intro{
 
-    background-image: url(../img/tattoo1.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center right;
-    height: 75svh;
-    padding: 1em;
+    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
-    position: relative;
-
-    a, h1, h2, p{
-        z-index: 100;
-    }
-
-    a{
-        padding: 10px 10px;
-        border-radius: 5px;
-        font-size: 1.3rem;
-        font-weight: 600;
-        background-color: var(--color-botones);
-        transition: color 0.5s ease, background-color 0.5s ease;
-    }
-
-    a:hover{
-
-        background-color: var(--color-botones-hover);
-        color: var(--letras-hover);
-        transition: color 0.5s ease, background-color 0.5s ease;
-    }
-
-    .intro__color-box{
-
-        height: 100%;
-        width:100%;
-        background-color: var(--color-principal);
-        position: absolute;
-        top: 0;
-    }
+    padding: 15px;
+    height: 90vh;
+    background-image: url(../img/tattoo4.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.services{
+.intro__color-box{
 
-    background-color: var(--color-secundario);
-    padding: 0.5rem;
+    position: absolute;
+    top: 0;
+    right:0;
+    background-color: var(--color-principal);
+    height: 100%;
+    width: 100%;
+}
+
+.boton__link{
+
+    background-color: var(--color-botones);
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.boton__link:hover{
+
+    background-color: var(--color-botones-hover);
+    color: var(--color-botones);
+}
+
+.intro h1, h2, p, a{
+
+    z-index: 1;
+}
+
+/* SERVICIOS */
+
+.services{
+    display:none;
 }
 
 .tatuador{
 
-    background-color: var(--color-principal);
-    padding: 0.5rem;
-
-    .container__tatuador{
-
-        width: 100%;
-        border: #fff solid 3px;
-        border-radius: 20px;
-        display: flex;
-        flex-direction: column;
-
-        img{
-            width: 15rem;
-            height: 15rem;
-            padding: 1rem;
-            border-radius: 30px;
-            align-self: center;
-        }
-
-        .datos__tatuador{
-
-            width: 100%;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-
-            h3{
-                text-align: center;
-                padding: 0.5rem;
-            }
-
-            .mas__datos{
-
-                width: 60%;
-                padding: 0.5rem;
-                text-align: left;
-                display:flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-        }
-    }
+    display: none;
 }
 
 .pedidos{
 
-    background-color: var(--color-secundario);
-    padding: 0.5rem;
-
-    form {
-        border: solid 3px #fff;
-        border-radius: 20px;
-        padding: 0.5rem;
-    }
+    display: none;
 }
 
-footer{
+.footer{
 
-    background-color: var(--color-principal);
-    width: 100%;
-    padding: 0.5rem;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-
-    h3{
-        margin-bottom: 20px;
-        font-size: 1.5em;
-    }
-
-    h4{
-        font-size: 1.2em;
-    }
-
-    h5{
-        font-size: 1.1em;
-    }
-
-    .container__contactos{
-
-        padding: 0.5rem;
-        width: 300px;
-
-        .contactos{
-
-            margin: 0.3rem 0;
-            width: 100%;
-
-            h5{
-                display:inline;
-            }
-        }
-    }
-
-    .social{
-
-        padding: 0.5rem;
-        width: 300px;
-    }
-
-    h4{
-    
-        display: inline;
-        margin: 0 10px;
-
-        a:hover{
-    
-            color: var(--color-detalles)
-        }
-    }
+    display: none;
 }
