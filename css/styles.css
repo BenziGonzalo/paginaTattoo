@@ -82,7 +82,14 @@ p{
     font-size: 2.3rem;
     font-weight: 600;
     cursor: pointer;
-    margin: 0 15px;
+    padding: 0 15px;
+    position: fixed;
+    right: 0;
+    background-color: var(--color-secundario);
+    text-align: right;
+    height: 10vh;
+    width: 100%;
+    backdrop-filter: blur(5px);
 }
 
 .header__open-nav-button,
@@ -108,7 +115,7 @@ p{
     display: none;
     position: absolute;
     height: 90vh;
-    width: 100vw;
+    width: 100%;
     top: 10vh;
     background-color: var(--color-secundario);
     z-index: 2;
@@ -146,6 +153,7 @@ p{
 .header__checkbox:checked ~ .navbar{
 
     display: flex;
+    position: fixed;
 }
 
 .header__checkbox:checked ~ .header__open-nav-button{
@@ -234,19 +242,17 @@ p{
     text-align: center;
 }
 
-/* SERVICIOS */
+/*-------------------------------------- SERVICIOS --------------------------------------*/
 
 .services{
 
-    /* display:none; */
     background-color: var(--color-principal);
 }
 
-/*------------------------------ DATOS DEL TATUADOR ------------------------------*/
+/*---------------------------------- DATOS DEL TATUADOR ----------------------------------*/
 
 .tatuador{
 
-    /* display: none; */
     background-color: var(--color-secundario);
 }
 
@@ -256,11 +262,10 @@ p{
     height: 150px;
 }
 
-/*------------------------------------ PEDIDOS ------------------------------------*/
+/*---------------------------------------- PEDIDOS ----------------------------------------*/
 
 .pedidos{
 
-    /* display: none; */
     background-color: var(--color-principal);
 }
 
@@ -268,6 +273,5 @@ p{
 
 .footer{
 
-    /* display: none; */
     background-color: var(--color-secundario);
 }
